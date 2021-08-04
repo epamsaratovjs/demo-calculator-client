@@ -1,0 +1,6 @@
+{
+    "baseUrl": "http://localhost:3000/",
+    "fixturesFolder": "cypress/fixtures",
+    "integrationFolder": "cypress/integration",
+    "chromeWebSecurity": false 
+}
