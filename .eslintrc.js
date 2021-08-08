@@ -27,7 +27,7 @@ module.exports = {
     'no-else-after-return': 0,
     'no-underscore-dangle': 0,
     'global-require': 0,
-    'linebreak-style': [2, 'windows'],
+    'linebreak-style': [1, 'windows'],
     'no-console': 0,
     semi: 1,
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
