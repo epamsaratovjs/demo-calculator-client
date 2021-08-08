@@ -1,7 +1,6 @@
 import React from 'react';
-// import axios from 'axios';
 
-import sum from './utils';
+import calculate from './utils';
 
 import './Calculator.scss';
 
@@ -12,18 +11,11 @@ function Counter(): JSX.Element {
   const [firstParam, setFirstParam] = React.useState('');
   const [secondParam, setSecondParam] = React.useState('');
 
-  const handleSum = async (e: React.SyntheticEvent): Promise<any> => {
+  const handleCalculate = async (e: React.SyntheticEvent): Promise<any> => {
     e.preventDefault();
 
-    const result = sum(+firstParam, +secondParam);
+    const result = calculate(+firstParam, +secondParam);
     setCounter(result);
-
-    // try {
-    //   const response = await axios.get('/api/add', { params: { a: counter, b: value } });
-    //   console.log(response);
-    // } catch (error) {
-    //   console.error(error);
-    // }
   };
 
   const handleClear = (): void => {
@@ -72,9 +64,9 @@ function Counter(): JSX.Element {
           <button
             type="submit"
             className="calculator__button"
-            onClick={handleSum}
+            onClick={handleCalculate}
           >
-            Sum
+            Calculate
           </button>
           <button
             type="button"
