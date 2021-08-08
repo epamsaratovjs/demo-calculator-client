@@ -5,6 +5,8 @@ import sum from './utils';
 
 import './Calculator.scss';
 
+const DIGIT_REGEXP = /^(\s*|\d+)$/;
+
 function Counter(): JSX.Element {
   const [counter, setCounter] = React.useState(0);
   const [firstParam, setFirstParam] = React.useState('');
@@ -33,7 +35,7 @@ function Counter(): JSX.Element {
   const handleChangeFirstParam = (e: React.SyntheticEvent): void => {
     const target = e.target as HTMLInputElement;
 
-    if (/^(\s*|\d+)$/.test(target.value)) {
+    if (DIGIT_REGEXP.test(target.value)) {
       setFirstParam(target.value);
     }
   };
@@ -41,7 +43,7 @@ function Counter(): JSX.Element {
   const handleChangeSecondParam = (e: React.SyntheticEvent): void => {
     const target = e.target as HTMLInputElement;
 
-    if (/^(\s*|\d+)$/.test(target.value)) {
+    if (DIGIT_REGEXP.test(target.value)) {
       setSecondParam(target.value);
     }
   };
