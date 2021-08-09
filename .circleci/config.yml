@@ -4,14 +4,27 @@ orbs:
   node: circleci/node@4.1
   heroku: circleci/heroku@1.2
 
+jobs:
+  test:
+    executor:
+      name: node/default
+      tag: '14'
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          command: yarn run test
+          name: Run YARN tests
+
 workflows:
-  sample:
+  test-and-deploy:
     jobs:
-      - node/test
+      - test
       - heroku/deploy-via-git:
           force: true
           requires:
-            - node/test
+            - test
           filters:
             branches:
               only: main
