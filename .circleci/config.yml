@@ -5,7 +5,7 @@ orbs:
   heroku: circleci/heroku@1.2
 
 workflows:
-  heroku_deploy:
+  sample:
     jobs:
       - node/test
       - heroku/deploy-via-git:
