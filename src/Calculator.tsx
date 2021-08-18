@@ -66,7 +66,7 @@ function Counter(): JSX.Element {
             className="calculator__button"
             onClick={handleCalculate}
           >
-            Calc nums
+            Sum numbers
           </button>
           <button
             type="button"
