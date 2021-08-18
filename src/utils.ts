@@ -1,3 +1,3 @@
-const calculate = (a: number, b: number): number => a * b + 1;
+const calculate = (a: number, b: number): number => a * b;
 
 export default calculate;
