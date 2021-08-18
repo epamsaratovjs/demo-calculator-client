@@ -1,7 +1,7 @@
 import calculate from './utils';
 
-test('функция calculate умножать два числа', (): void => {
-  expect(calculate(4, 2)).toBe(8);
+test('функция calculate суммировать два числа', (): void => {
+  expect(calculate(4, 2)).toBe(6);
 });
 
 export {};
